@@ -4,6 +4,6 @@
 //n + nn + nnn, где n не перемножаются, а конкатенируются
 
 let n = 9;
-let double_n = Number(String(n) + String(n));
-let triple_n = Number(String(n) + String(n) + String(n))
+let double_n = Number(String(n) + n);
+let triple_n = Number(String(n) + n + n)
 console.log(n + double_n + triple_n)
