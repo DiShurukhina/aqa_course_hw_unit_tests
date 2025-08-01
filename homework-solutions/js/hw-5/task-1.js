@@ -26,13 +26,11 @@ for (let i = 10; i >= 0; i--) {
  */
 
 let smilePatternResult = '';
-for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < i+1; j++) {
-         smilePatternResult += ':)';
-    }
-    if (i !== 4) smilePatternResult += '\n'
+for (let i = 0; i <= 5; i++) {
+  smilePatternResult += ':)'.repeat(i) + '\n';
 }
-// console.log(smilePatternResult);
+smilePatternResult = smilePatternResult.trim();
+//console.log(smilePatternResult);
 
 /**
  * Заменить все пробелы в переменной text на "1".
