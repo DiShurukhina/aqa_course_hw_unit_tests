@@ -13,7 +13,34 @@
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
 
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 let resultUnique;
 let resultNull;
+function findUnique(menu) {
+  let tempResult = [];
+  for (const myPizza of menu) {
+    let isUnique = true;
+
+    for (const notMyPizza of competitorPizzas) {
+      if (myPizza.toLowerCase() === notMyPizza.toLowerCase()) {
+        isUnique = false;
+        break;
+      }
+    }
+
+    if (isUnique) {
+      tempResult.push(myPizza);
+    }
+  }
+  if (tempResult.length > 0) {
+    resultUnique = tempResult;
+  } else {
+    resultNull = null;
+  }
+}
+findUnique(myPizzasT1);
+findUnique(myPizzasT2);
 
 export { resultNull, resultUnique };
