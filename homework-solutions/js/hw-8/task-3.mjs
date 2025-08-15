@@ -7,7 +7,9 @@
 */
 
 function findMissingNumber(numbers) {
-  // Ваш код
+  const set = new Set(numbers);
+  for (let i = 1; i <= numbers.length + 1; i++) {
+    if (!set.has(i)) return i;
+  }
 }
-
 export { findMissingNumber };
