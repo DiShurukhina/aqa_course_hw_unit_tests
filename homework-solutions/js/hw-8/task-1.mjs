@@ -33,6 +33,6 @@ let reduce = numbers.reduce((sum, num) => sum + num, 0);
 
 let some = numbers.some((el) => el > 90);
 
-let every = numbers.every((el) => el >= 10);
+let every = numbers.every((el) => el >= 10 && el < 100);
 
 export { forEach, map, filter, find, sort, reduce, some, every };

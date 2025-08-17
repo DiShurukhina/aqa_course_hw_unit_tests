@@ -18,7 +18,7 @@ const words = [
   'queue',
 ];
 
-let vowel = new Set(['a','e','y','u','i','o']);
+let vowel = new Set(['a','e','y','u','i','o', 'A', 'E', 'Y', 'U', 'I', 'O']);
 function sortedByVowels(wordsArr) {
   return wordsArr.toSorted((a,b) => countVowels(a) - countVowels(b));
 }
