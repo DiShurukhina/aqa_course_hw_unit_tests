@@ -40,13 +40,9 @@ Promise.allSettled(arrayOfPromises).then((results) => results.forEach((result) =
 
 // 7. Повторите пункты 5 и 6 используя асинхронные функции с блоком try..catch
 
-function promiseNumber(number) {
-  return new Promise((resolve) => resolve(number));
-}
-
 async function asyncPromiseAll() {
     try {
-        let results = await Promise.all(arrayOfPromises);
+        const results = await Promise.all(arrayOfPromises);
         results.forEach((result) => console.log(result))
     } catch (error) {
         console.error(error.message);
@@ -55,7 +51,7 @@ async function asyncPromiseAll() {
 
 async function asyncPromiseAllSettled() {
     try {
-        let results = await Promise.allSettled(arrayOfPromises);
+        const results = await Promise.allSettled(arrayOfPromises);
         results.forEach((result) => console.log(result))
     } catch (error) {
         console.error(error.message);

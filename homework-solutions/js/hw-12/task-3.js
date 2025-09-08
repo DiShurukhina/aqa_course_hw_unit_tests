@@ -54,12 +54,12 @@ async function sendRequest(endpoint) {
     return await response.json();
   } catch (error) {
     console.error(error.message);
-    throw error;
   }
 }
 
 async function getUsersWithAlbumsAndPhotos() {
   const [users, albums, photos] = await Promise.all(['users', 'albums', 'photos'].map(sendRequest));
+  if(!users || !albums || !photos) return [];
   return users.map((user) => {
     const albumsStrings = albums
       .filter((album) => album.userId === user.id)

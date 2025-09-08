@@ -15,6 +15,9 @@ async function createTodo(todoBody) {
     try {
         const response = await fetch(baseUrl, {
             method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
             body: JSON.stringify(todoBody),
         });
         if(!response.ok || response.status !== 201) {
