@@ -10,7 +10,6 @@
 
 function validatePassword(password: string): boolean {
     return (
-        typeof password === 'string' &&
         password.trim().length >= 8 &&
         /[A-ZА-ЯЁ]/.test(password) &&
         /[a-zа-яё]/.test(password) &&
