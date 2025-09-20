@@ -27,8 +27,8 @@ type QaKeys = keyof typeof QA;
 type UserType = typeof QA;
 
 type PartialEmployee = Partial<IEmployee>;
-type PickEmployee = Pick<IEmployee, 'name' | 'salary'>;
-type OmitEmployee = Omit<IEmployee, 'isManager'>;
+type EmployeeBasicInfo = Pick<IEmployee, 'name' | 'salary'>;
+type EmployeeWithoutManagerFlag = Omit<IEmployee, 'isManager'>;
 type ReadonlyEmployee = Readonly<IEmployee>;
 
 const RecordEmployee : Record<string, keyof typeof QA> = {
